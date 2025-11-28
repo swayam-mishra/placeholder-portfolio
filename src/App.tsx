@@ -6,7 +6,7 @@ import {
   SiEspressif, SiLinkedin, SiX, SiMedium, SiTryhackme
 } from 'react-icons/si';
 import { useState } from 'react';
-import portraitPhoto from 'figma:asset/ac757279d6db7cb80d4b07e8cd4b0f041cb62672.png';
+import portraitPhoto from './assets/portrait.jpg';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
