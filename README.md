@@ -1,8 +1,6 @@
 
-  # Minimal Personal Portfolio Website
-
-  This is a code bundle for Minimal Personal Portfolio Website. The original project is available at https://www.figma.com/design/ZhhZ7ZT7GNgowtlc4sQtRY/Minimal-Personal-Portfolio-Website.
-
+  # Temporary Placeholder Portfolio Website
+  
   ## Running the code
 
   Run `npm i` to install the dependencies.
