@@ -1,54 +1,11 @@
-import { Mail, Phone, Moon, Sun, Cpu, Radio, Gauge, CircuitBoard, Code2, Navigation, Compass } from 'lucide-react';
-import { 
-  SiCplusplus, SiOracle, SiPython, SiKotlin, SiJavascript, SiPostgresql, SiMysql,
-  SiReact, SiNodedotjs, SiPandas, SiScikitlearn, SiAndroid, SiJetpackcompose,
-  SiGit, SiGithub, SiSupabase, SiAppwrite, SiArduino, SiFigma,
-  SiEspressif, SiLinkedin, SiX, SiMedium, SiTryhackme
-} from 'react-icons/si';
+import { Mail, Phone, Moon, Sun } from 'lucide-react';
+import { SiGithub, SiLinkedin, SiX, SiMedium, SiTryhackme } from 'react-icons/si';
 import { useState } from 'react';
 import portraitPhoto from './assets/portrait.jpg';
+import { skillsData, projectData } from './data';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const skillsData = {
-    Languages: [
-      { name: 'C++', icon: SiCplusplus },
-      { name: 'Java', icon: SiOracle },
-      { name: 'Python', icon: SiPython },
-      { name: 'JavaScript', icon: SiJavascript },
-      { name: 'Kotlin', icon: SiKotlin },
-      { name: 'PostgreSQL', icon: SiPostgresql },
-      { name: 'MySQL', icon: SiMysql },
-    ],
-    'Frameworks & Libraries': [
-      { name: 'React.js', icon: SiReact },
-      { name: 'Node.js', icon: SiNodedotjs },
-      { name: 'Pandas', icon: SiPandas },
-      { name: 'Scikit-learn', icon: SiScikitlearn },
-      { name: 'JDBC', icon: SiOracle },
-      { name: 'Android SDK', icon: SiAndroid },
-      { name: 'Jetpack Compose', icon: SiJetpackcompose },
-    ],
-    'Developer Tools': [
-      { name: 'Git', icon: SiGit },
-      { name: 'GitHub', icon: SiGithub },
-      { name: 'VS Code', icon: Code2 },
-      { name: 'Supabase', icon: SiSupabase },
-      { name: 'Appwrite', icon: SiAppwrite },
-      { name: 'Arduino IDE', icon: SiArduino },
-      { name: 'Figma', icon: SiFigma },
-    ],
-    'Hardware & IoT': [
-      { name: 'ESP32', icon: SiEspressif },
-      { name: 'Arduino Uno', icon: SiArduino },
-      { name: 'MPU6050', icon: Gauge },
-      { name: 'LoRa Module', icon: Radio },
-      { name: 'SIM800L', icon: CircuitBoard },
-      { name: 'MAX302', icon: Cpu },
-      { name: 'Neo-6M GPS', icon: Navigation },
-    ]
-  };
 
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
@@ -110,49 +67,17 @@ export default function App() {
             <section className="space-y-4 animate-fade-in" style={{ animationDelay: '300ms' }}>
               <h2 className={`uppercase tracking-wide opacity-70 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
               <div className="space-y-5">
-                {/* Project 1 */}
-                <div className={`space-y-1 border-3 p-4 shadow-[4px_4px_0px_0px] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_0px] ${
-                  isDarkMode 
-                    ? 'border-white bg-black shadow-white hover:shadow-white' 
-                    : 'border-black bg-white shadow-black hover:shadow-black'
-                }`}>
-                  <h3 className={`transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Spend Wise — AI-Powered Personal Finance CLI</h3>
-                  <p className={`text-xs opacity-70 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>C++, Python, MySQL</p>
-                  <p className={`text-sm transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>AI-powered finance tracker with ML predictions and generative AI suggestions.</p>
-                </div>
-
-                {/* Project 2 */}
-                <div className={`space-y-1 border-3 p-4 shadow-[4px_4px_0px_0px] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_0px] ${
-                  isDarkMode 
-                    ? 'border-white bg-black shadow-white hover:shadow-white' 
-                    : 'border-black bg-white shadow-black hover:shadow-black'
-                }`}>
-                  <h3 className={`transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Smart Mountain Climber Helmet</h3>
-                  <p className={`text-xs opacity-70 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>ESP32, LoRa, GPS</p>
-                  <p className={`text-sm transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Wearable IoT safety system with vitals monitoring and emergency alerts.</p>
-                </div>
-
-                {/* Project 3 */}
-                <div className={`space-y-1 border-3 p-4 shadow-[4px_4px_0px_0px] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_0px] ${
-                  isDarkMode 
-                    ? 'border-white bg-black shadow-white hover:shadow-white' 
-                    : 'border-black bg-white shadow-black hover:shadow-black'
-                }`}>
-                  <h3 className={`transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Decentralized Supply Chain Tracker</h3>
-                  <p className={`text-xs opacity-70 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Solidity, Foundry, React.js</p>
-                  <p className={`text-sm transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Blockchain-based product tracking platform with role-based smart contracts.</p>
-                </div>
-
-                {/* Project 4 */}
-                <div className={`space-y-1 border-3 p-4 shadow-[4px_4px_0px_0px] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_0px] ${
-                  isDarkMode 
-                    ? 'border-white bg-black shadow-white hover:shadow-white' 
-                    : 'border-black bg-white shadow-black hover:shadow-black'
-                }`}>
-                  <h3 className={`transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Delivery Service Engine (Backend System)</h3>
-                  <p className={`text-xs opacity-70 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>Java, JDBC, PostgreSQL</p>
-                  <p className={`text-sm transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>A complete backend architecture for an online food delivery platform.</p>
-                </div>
+                {projectData.map((project, index) => (
+                  <div key={index} className={`space-y-1 border-3 p-4 shadow-[4px_4px_0px_0px] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_0px] ${
+                    isDarkMode 
+                      ? 'border-white bg-black shadow-white hover:shadow-white' 
+                      : 'border-black bg-white shadow-black hover:shadow-black'
+                  }`}>
+                    <h3 className={`transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>{project.title}</h3>
+                    <p className={`text-xs opacity-70 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>{project.tech}</p>
+                    <p className={`text-sm transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>{project.desc}</p>
+                  </div>
+                ))}
               </div>
             </section>
           </div>
@@ -180,7 +105,6 @@ export default function App() {
               <div className="space-y-6">
                 {Object.entries(skillsData).map(([category, skills]) => {
                   const isLanguage = category === 'Languages';
-                  
                   return (
                     <div key={category} className="space-y-3">
                       <h3 className={`text-xs uppercase tracking-wider opacity-60 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>
